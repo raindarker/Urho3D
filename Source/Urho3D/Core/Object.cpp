@@ -523,7 +523,7 @@ void Object::RemoveEventSender(Object* sender)
 }
 
 
-Urho3D::StringHash EventNameRegistrar::RegisterEventName(const char* eventName)
+Urho3D::StringHash EventNameRegistrar::RegisterEventName(const char* eventName) noexcept
 {
     StringHash id(eventName);
     GetEventNameMap()[id] = eventName;
